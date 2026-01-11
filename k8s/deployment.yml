@@ -1,10 +1,10 @@
 apiversion: apps/v1
 kind: Deployment
 metadata:
-  name: movie-app 
+  name: movie-app
   namespace: default
 spec:
-  replicas: 5 
+  replicas: 5
   selector:
     matchLabels:
       app: movie-app
@@ -13,9 +13,8 @@ spec:
       labels:
         app: movie-app
     spec:
-      containers: 
+      containers:
         - name: movie-app
-          image: venkatesh990/
+          image: venkatesh990/multibranch-flask-app:latest
           ports:
-            - containerPort: 5000 
-           
+            - containerPort: 5000
