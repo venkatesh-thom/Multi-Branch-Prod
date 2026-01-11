@@ -1,0 +1,11 @@
+apiversion: v1
+kind: Service
+metadata:
+  name: movie-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: movie-app
+  ports:
+    - port: 80
+      targetPort: 5000 ## containerPort of deployment.yml

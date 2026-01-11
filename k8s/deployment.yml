@@ -1,0 +1,21 @@
+apiversion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-app 
+  namespace: default
+spec:
+  replicas: 5 
+  selector:
+    matchLabels:
+      app: movie-app
+  template:
+    metadata:
+      labels:
+        app: movie-app
+    spec:
+      containers: 
+        - name: movie-app
+          image: venkatesh990/
+          ports:
+            - containerPort: 5000 
+           
